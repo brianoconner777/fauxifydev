@@ -1,0 +1,65 @@
+{
+  "name": "Fauxorder",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Orderid": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "Restid": {
+      "type": "string"
+    },
+    "ordertotal": {
+      "type": "string"
+    },
+    "customernumber": {
+      "type": "string"
+    },
+    "customeraddress": {
+      "type": "string"
+    },
+    "customeremail": {
+      "type": "string"
+    },
+    "customername": {
+      "type": "string"
+    },
+    "ordertiming": {
+      "type": "string"
+    },
+    "orderinfo": {
+      "type": "object"
+    },
+    "takeaway": {
+      "type": "object"
+    },
+    "delivery": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW",
+      "property": "findById"
+    }
+  ],
+  "methods": {}
+}

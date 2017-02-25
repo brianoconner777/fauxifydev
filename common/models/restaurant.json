@@ -1,0 +1,95 @@
+{
+  "name": "Restaurant",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Restid": {
+      "type": "string",
+      "id": true
+    },
+    "Thumbnail": {
+      "type": "string"
+    },
+    "Restname": {
+      "type": "string"
+    },
+    "Resttype": {
+      "type": "string"
+    },
+    "Deliversin": {
+      "type": "string"
+    },
+    "Minorder": {
+      "type": "string"
+    },
+    "Deliveryfee": {
+      "type": "string"
+    },
+    "Openinghours": {
+      "type": "string"
+    },
+    "Deliveryradius": {
+      "type": "string"
+    },
+    "Ordercapacity": {
+      "type": "string"
+    },
+    "Adflag": {
+      "type": "boolean"
+    },
+    "Location": {
+      "type": "geopoint"
+    },
+    "Partybook": {
+      "type": "boolean"
+    },
+    "Paymentmethods": {
+      "type": [
+        "string"
+      ]
+    },
+    "Takeaway": {
+      "type": "boolean"
+    },
+    "Menu": {
+      "type": "object"
+    },
+    "Rating": {
+      "type": "string"
+    },
+    "orders": {
+      "type": [
+        "Fauxorder"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "find"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "findById"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}
