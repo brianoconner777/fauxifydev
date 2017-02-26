@@ -61,7 +61,7 @@
     "Rating": {
       "type": "string"
     },
-    "FreeDeliveryAmount":{
+    "freeDeliveryAmount":{
       "type":"string"
     },
     "RestaurantStatus":{
