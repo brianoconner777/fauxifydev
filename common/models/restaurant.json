@@ -61,6 +61,12 @@
     "Rating": {
       "type": "string"
     },
+    "FreeDeliveryAmount":{
+      "type":"string"
+    },
+    "RestaurantStatus":{
+      "type":"string"
+    },
     "orders": {
       "type": [
         "Fauxorder"
