@@ -9,25 +9,31 @@
   "properties": {
     "Restid": {
       "type": "string",
-      "id": true
+      "id": true,
+      "required": true
     },
     "Thumbnail": {
       "type": "string"
     },
     "Restname": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Resttype": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Deliversin": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Minorder": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Deliveryfee": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Openinghours": {
       "type": "string"
@@ -36,7 +42,8 @@
       "type": "string"
     },
     "Ordercapacity": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Adflag": {
       "type": "boolean"
@@ -62,10 +69,12 @@
       "type": "string"
     },
     "freeDeliveryAmount":{
-      "type":"string"
+      "type":"string",
+      "required": true
     },
     "RestaurantStatus":{
-      "type":"string"
+      "type":"string",
+      "required": true
     },
     "orders": {
       "type": [
